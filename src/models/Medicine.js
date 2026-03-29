@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const MedicineSchema = new mongoose.Schema({
   name: { type: String, required: true },
   slug: { type: String, unique: true, sparse: true },
+  category: { type: String, default: 'General' },
   genericName: { type: String },
   manufacturer: { type: String },
   description: { type: String },
@@ -12,8 +13,8 @@ const MedicineSchema = new mongoose.Schema({
   imageUrl: { type: String }
 }, {
   timestamps: true,
-  toJSON: { virtuals: true, versionKey: false, transform: (doc, ret) => { ret.id = ret._id; delete ret._id; } },
-  toObject: { virtuals: true, versionKey: false, transform: (doc, ret) => { ret.id = ret._id; delete ret._id; } }
+  toJSON: { virtuals: true, versionKey: false },
+  toObject: { virtuals: true, versionKey: false }
 });
 
 // Normalize the ID field so JSON and MongoDB data have matching field structures (.id instead of only ._id)

@@ -30,7 +30,7 @@ export default function AdminMedicinesPage() {
     try {
       const res = await fetch(`/api/medicines/${id}`, { method: 'DELETE' });
       if (res.ok) {
-        setMedicines(medicines.filter((m) => m.id !== id));
+        setMedicines(medicines.filter((m) => m._id !== id));
       } else {
         alert('Failed to delete medicine');
       }
@@ -72,37 +72,39 @@ export default function AdminMedicinesPage() {
             <thead className="bg-gray-50 dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 text-gray-900 dark:text-gray-300">
               <tr>
                 <th scope="col" className="px-6 py-4 font-medium">Name & Generic</th>
+                <th scope="col" className="px-6 py-4 font-medium">Category</th>
                 <th scope="col" className="px-6 py-4 font-medium">Manufacturer</th>
-                <th scope="col" className="px-6 py-4 font-medium">Added On</th>
-                <th scope="col" className="px-6 py-4 font-medium text-right">Actions</th>
+                <th scope="col" className="px-6 py-4 font-medium text-right flex items-center justify-end">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
               {medicines.length === 0 ? (
                 <tr>
-                  <td colSpan="4" className="px-6 py-8 justify-center text-center text-gray-400 dark:text-gray-500">
+                  <td colSpan="5" className="px-6 py-8 justify-center text-center text-gray-400 dark:text-gray-500">
                     No medicines found. Click "Add Medicine" to create one.
                   </td>
                 </tr>
               ) : (
                 medicines.map((medicine) => (
-                  <tr key={medicine.id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                  <tr key={medicine._id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="font-semibold text-gray-900 dark:text-white">{medicine.name}</div>
                       <div className="text-xs text-gray-500 dark:text-gray-400">{medicine.genericName || 'N/A'}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      {medicine.manufacturer || '-'}
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+                        {medicine.category || 'General'}
+                      </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-500">
-                      {medicine.createdAt ? new Date(medicine.createdAt).toLocaleDateString() : 'Unknown'}
+                      {medicine.manufacturer || '-'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right font-medium">
                       <div className="flex justify-end gap-2">
-                        <Link href={`/admin/medicines/${medicine.id}/edit`} className="p-2 text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-900/30 rounded-lg transition-colors" title="Edit">
+                        <Link href={`/admin/medicines/${medicine._id}/edit`} className="p-2 text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-900/30 rounded-lg transition-colors" title="Edit">
                           <Edit2 className="w-4 h-4" />
                         </Link>
-                        <button onClick={() => handleDelete(medicine.id)} className="p-2 text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/30 rounded-lg transition-colors" title="Delete">
+                        <button onClick={() => handleDelete(medicine._id)} className="p-2 text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/30 rounded-lg transition-colors" title="Delete">
                           <Trash2 className="w-4 h-4" />
                         </button>
                       </div>

@@ -208,7 +208,7 @@ export default function AdminImportPage() {
         <div className="text-sm space-y-2">
           <p className="font-bold text-slate-700 dark:text-slate-300">Important Notes:</p>
           <ul className="list-disc list-inside text-slate-500 dark:text-slate-400 space-y-1">
-            <li>Duplicate <code className="bg-slate-200 dark:bg-slate-800 px-1 rounded">slug</code> or <code className="bg-slate-200 dark:bg-slate-800 px-1 rounded">id</code> entries will overwrite existing data.</li>
+            <li>Duplicate <code className="bg-slate-200 dark:bg-slate-800 px-1 rounded">slug</code> or <code className="bg-slate-200 dark:bg-slate-800 px-1 rounded">_id</code> entries will overwrite existing data.</li>
             <li>Ensure image URLs are complete (HTTPS).</li>
             <li>Dosages and side effects should be arrays in the JSON.</li>
           </ul>

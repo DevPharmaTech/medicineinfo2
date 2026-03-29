@@ -8,6 +8,7 @@ export default function MedicineForm({ initialData = {}, isEdit = false }) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: initialData.name || '',
+    category: initialData.category || 'General',
     genericName: initialData.genericName || '',
     manufacturer: initialData.manufacturer || '',
     description: initialData.description || '',
@@ -37,7 +38,7 @@ export default function MedicineForm({ initialData = {}, isEdit = false }) {
         payload.sideEffects = payload.sideEffects.split(',').map(s => s.trim()).filter(Boolean);
       }
 
-      const url = isEdit ? `/api/medicines/${initialData.id}` : '/api/medicines';
+      const url = isEdit ? `/api/medicines/${initialData._id}` : '/api/medicines';
       const method = isEdit ? 'PUT' : 'POST';
 
       const res = await fetch(url, {
@@ -77,6 +78,11 @@ export default function MedicineForm({ initialData = {}, isEdit = false }) {
           <div className="space-y-2">
             <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Generic Name</label>
             <input type="text" name="genericName" value={formData.genericName} onChange={handleChange} className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all dark:text-white" placeholder="e.g. Paracetamol" />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">Category *</label>
+            <input required type="text" name="category" value={formData.category} onChange={handleChange} className="w-full px-4 py-2 bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all dark:text-white" placeholder="e.g. Analgesics" />
           </div>
 
           <div className="space-y-2">

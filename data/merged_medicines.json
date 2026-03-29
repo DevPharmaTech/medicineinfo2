@@ -1,0 +1,287 @@
+[
+  {
+    "slug": "paracetamol",
+    "name": "Paracetamol",
+    "category": "Analgesics",
+    "genericName": "Acetaminophen",
+    "manufacturer": "HealthCare Inc",
+    "description": "It is used to treat mild to moderate pain (from headaches, menstrual periods, toothaches, backaches, osteoarthritis, or cold/flu aches and pains) and to reduce fever.",
+    "dosages": [
+      "500mg tablet",
+      "650mg tablet",
+      "250mg suspension"
+    ],
+    "sideEffects": [
+      "Nausea",
+      "Stomach pain",
+      "Loss of appetite"
+    ],
+    "precautions": "Do not exceed the recommended dose. Avoid alcohol while taking this medication. Consult a doctor with severe liver issues.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:10:00.000Z",
+    "updatedAt": "2026-03-29T07:10:00.000Z"
+  },
+  {
+    "slug": "ibuprofen",
+    "name": "Ibuprofen",
+    "category": "Analgesics",
+    "genericName": "Advil/Motrin equivalent",
+    "manufacturer": "PainLess",
+    "description": "Used to relieve pain from various conditions such as headache, dental pain, and muscle aches.",
+    "dosages": [
+      "200mg tablet",
+      "400mg tablet",
+      "600mg tablet"
+    ],
+    "sideEffects": [
+      "Stomach upset",
+      "Nausea",
+      "Dizziness"
+    ],
+    "precautions": "Risk of stomach bleeding. Avoid alcohol.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "amoxil",
+    "name": "Amoxil",
+    "category": "Antibiotics",
+    "genericName": "Amoxicillin",
+    "manufacturer": "PharmaMed Co.",
+    "description": "A penicillin antibiotic used to treat many different types of infection caused by bacteria, such as tonsillitis, bronchitis, pneumonia, and infections of the ear, nose, throat, skin, or urinary tract.",
+    "dosages": [
+      "250mg capsule",
+      "500mg capsule",
+      "125mg/5mL suspension"
+    ],
+    "sideEffects": [
+      "Diarrhea",
+      "Rash",
+      "Allergic reaction"
+    ],
+    "precautions": "Do not use if you are allergic to amoxicillin or to any other penicillin antibiotic. Finish the entire course of medication.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:11:00.000Z",
+    "updatedAt": "2026-03-29T07:10:00.000Z"
+  },
+  {
+    "slug": "amoxicillin",
+    "name": "Amoxicillin",
+    "category": "Antibiotics",
+    "genericName": "Penicillin equivalent",
+    "manufacturer": "BioCure",
+    "description": "Used to treat a wide variety of bacterial infections.",
+    "dosages": [
+      "250mg capsule",
+      "500mg capsule"
+    ],
+    "sideEffects": [
+      "Nausea",
+      "Vomiting",
+      "Diarrhea"
+    ],
+    "precautions": "Risk of allergic reaction. Consult physician if you have kidney disease.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "metformin",
+    "name": "Metformin",
+    "category": "Antidiabetics",
+    "genericName": "Metformin Hydrochloride",
+    "manufacturer": "Generics Pharma",
+    "description": "Metformin is used with a proper diet and exercise program and possibly with other medications to control high blood sugar in patients with type 2 diabetes.",
+    "dosages": [
+      "500mg tablet",
+      "850mg tablet",
+      "1000mg extended-release"
+    ],
+    "sideEffects": [
+      "Nausea",
+      "Stomach upset",
+      "Diarrhea"
+    ],
+    "precautions": "Consult doctor if you have kidney issues or metabolic acidosis.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "lipitor",
+    "name": "Lipitor",
+    "category": "Cardiovascular",
+    "genericName": "Atorvastatin",
+    "manufacturer": "Pfizer",
+    "description": "Reduces levels of bad cholesterol (low-density lipoprotein, or LDL) and triglycerides in the blood, while increasing levels of good cholesterol.",
+    "dosages": [
+      "10mg tablet",
+      "20mg tablet",
+      "40mg tablet",
+      "80mg tablet"
+    ],
+    "sideEffects": [
+      "Muscle pain",
+      "Liver problems",
+      "Digestive issues"
+    ],
+    "precautions": "Do not use if pregnant or nursing. Advise doctor of any muscle pain immediately. Avoid grapefruit juice.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:12:00.000Z",
+    "updatedAt": "2026-03-29T07:12:00.000Z"
+  },
+  {
+    "slug": "lisinopril",
+    "name": "Lisinopril",
+    "category": "Cardiovascular",
+    "genericName": "Zestril equivalent",
+    "manufacturer": "HeartCare",
+    "description": "Used to treat high blood pressure. Lowering high blood pressure helps prevent strokes and heart attacks.",
+    "dosages": [
+      "5mg tablet",
+      "10mg tablet",
+      "20mg tablet"
+    ],
+    "sideEffects": [
+      "Dizziness",
+      "Cough",
+      "Headache"
+    ],
+    "precautions": "Risk of high potassium levels. Consult doctor.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "atorvastatin",
+    "name": "Atorvastatin",
+    "category": "Cardiovascular",
+    "genericName": "Lipitor equivalent",
+    "manufacturer": "CholestStop",
+    "description": "Used along with a proper diet to help lower bad cholesterol and fats.",
+    "dosages": [
+      "10mg tablet",
+      "20mg tablet",
+      "40mg tablet"
+    ],
+    "sideEffects": [
+      "Muscle pain",
+      "Diarrhea",
+      "Joint pain"
+    ],
+    "precautions": "Avoid grapefruit juice. Consult doctor if you have liver disease.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "omeprazole",
+    "name": "Omeprazole",
+    "category": "Gastrointestinal",
+    "genericName": "Prilosec equivalent",
+    "manufacturer": "StomachCare",
+    "description": "Used to treat certain stomach and esophagus problems such as acid reflux and ulcers.",
+    "dosages": [
+      "10mg capsule",
+      "20mg capsule",
+      "40mg capsule"
+    ],
+    "sideEffects": [
+      "Headache",
+      "Abdominal pain",
+      "Nausea"
+    ],
+    "precautions": "Consult doctor if you have osteoporosis or lupus.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "levothyroxine",
+    "name": "Levothyroxine",
+    "category": "General",
+    "genericName": "Synthroid equivalent",
+    "manufacturer": "ThyroCheck",
+    "description": "Used to treat an underactive thyroid (hypothyroidism).",
+    "dosages": [
+      "25mcg",
+      "50mcg",
+      "75mcg",
+      "100mcg"
+    ],
+    "sideEffects": [
+      "Palpitations",
+      "Nervousness",
+      "Weight loss"
+    ],
+    "precautions": "Risk of heart problems. Consult physician regularly for dosage checks.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "slug": "albuterol",
+    "name": "Albuterol",
+    "category": "General",
+    "genericName": "Albuterol",
+    "manufacturer": "Mylan",
+    "description": "Inhaler for treating asthma and exercise-induced asthma.",
+    "dosages": [
+      "90mcg inhaler"
+    ],
+    "sideEffects": [
+      "Dry mouth, cough, shortness of breath"
+    ],
+    "cautions": [
+      "Avoid in patients with known hypersensitivity to albuterol"
+    ],
+    "imageUrl": null,
+    "createdAt": "2023-04-25T12:00:00Z",
+    "updatedAt": "2023-04-25T12:00:00Z"
+  },
+  {
+    "slug": "loratadine",
+    "name": "Loratadine",
+    "category": "General",
+    "genericName": "Loratadine",
+    "manufacturer": "Allevia",
+    "description": "Temporary relief of allergy symptoms. Dosage: 10mg tablets.",
+    "dosages": [
+      "10mg tablets"
+    ],
+    "sideEffects": [
+      "Sneezing, runny nose, itching of the eyes, nose, or throat"
+    ],
+    "precautions": [
+      "Avoid during pregnancy and breastfeeding. Consult a healthcare professional if symptoms persist or worsen."
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-10-26T15:00:00Z",
+    "updatedAt": "2023-10-26T15:30:00Z"
+  },
+  {
+    "slug": "sertraline",
+    "name": "Sertraline",
+    "category": "Mental Health",
+    "genericName": "Sertraline",
+    "manufacturer": "Pfizer",
+    "description": "Sertraline is a selective serotonin reuptake inhibitor (SSRI) used to treat depression, panic attacks, obsessive compulsive disorder, post-traumatic stress disorder, social anxiety disorder (social phobia), and a severe form of premenstrual syndrome (premenstrual dysphoric disorder).",
+    "doages": [
+      "50mg",
+      "100mg"
+    ],
+    "sideEffects": [
+      "Headache",
+      "Increased heart rate",
+      "Sleep disturbances"
+    ],
+    "Precautions": [
+      "Use caution in patients with a history of liver disease.",
+      "Stop taking sertraline if you have allergies to any of the ingredients"
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-04-01T12:00:00Z",
+    "updatedAt": "2023-04-01T12:00:00Z"
+  }
+]

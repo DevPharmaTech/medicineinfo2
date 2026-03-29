@@ -87,8 +87,8 @@ export default async function PublicMedicinesList(props) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
                       {groupedMedicines[category].map((med, index) => (
                         <Link 
-                          key={med.id} 
-                          href={`/medicines/${med.slug || med.id}`} 
+                          key={med._id} 
+                          href={`/medicines/${med.slug || med._id}`} 
                           className="group relative bg-white dark:bg-[#111113] rounded-[1rem] p-4 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800/80 hover:ring-indigo-500 dark:hover:ring-indigo-500 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full overflow-hidden"
                           style={{ animationDelay: `${index * 50}ms` }}
                         >

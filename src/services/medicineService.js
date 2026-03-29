@@ -69,11 +69,11 @@ async function writeToShard(item) {
     shardData = JSON.parse(content);
   } catch (e) {}
   
-  const idx = shardData.findIndex(i => i.id === item.id);
+  const idx = shardData.findIndex(i => (i._id || i.id) === (item._id || item.id));
   if (idx !== -1) {
-    shardData[idx] = item;
+    shardData[idx] = { ...item, _id: item._id || item.id };
   } else {
-    shardData.unshift(item);
+    shardData.unshift({ ...item, _id: item._id || item.id });
   }
   
   await fs.writeFile(filePath, JSON.stringify(shardData, null, 2), 'utf8');
@@ -82,7 +82,7 @@ async function writeToShard(item) {
 // Helper to rewrite the entire shard for deletions/updates
 async function updateShardAfterMutation(items, mutatedId) {
   // Find which shard the mutated item belongs to
-  const item = items.find(i => i.id === mutatedId);
+  const item = items.find(i => (i._id || i.id) === mutatedId);
   const cat = item?.category || 'General Reference';
   const filename = catToFilename(cat);
   const filePath = path.join(jsonDirPath, filename);
@@ -117,7 +117,7 @@ export const medicineService = {
       try { return await Medicine.findById(id).lean(); } catch (e) { return null; }
     } else {
       const medicines = await readJsonDb();
-      return medicines.find((m) => m.id === id) || null;
+      return medicines.find((m) => (m._id || m.id) === id) || null;
     }
   },
 
@@ -133,7 +133,7 @@ export const medicineService = {
     } else {
       const medicines = await readJsonDb();
       let med = medicines.find((m) => m.slug === slugOrId);
-      if (!med) med = medicines.find((m) => m.id === slugOrId) || null;
+      if (!med) med = medicines.find((m) => (m._id || m.id) === slugOrId) || null;
       return med;
     }
   },
@@ -146,21 +146,19 @@ export const medicineService = {
 
     if (isMongo) {
       await dbConnect();
-      const newMed = new Medicine({
-        ...data,
-        _id: data.id || undefined // Use provided id as mongodb _id if possible
-      });
+      const newMed = new Medicine(data);
       const saved = await newMed.save();
       return saved.toObject();
     } else {
       const newMed = {
         ...data,
-        id: data.id || uuidv4(),
+        _id: data._id || data.id || uuidv4(),
         dosages: data.dosages || [],
         sideEffects: data.sideEffects || [],
         createdAt: data.createdAt || new Date().toISOString(),
         updatedAt: data.updatedAt || new Date().toISOString()
       };
+      delete newMed.id; // ensure no .id
       // Put at the start so newest is first
       await writeToShard(newMed);
       return newMed;
@@ -179,7 +177,7 @@ export const medicineService = {
       return updated ? updated.toObject() : null;
     } else {
       const medicines = await readJsonDb();
-      const idx = medicines.findIndex((m) => m.id === id);
+      const idx = medicines.findIndex((m) => (m._id || m.id) === id);
       if (idx === -1) return null;
 
       const oldCategory = medicines[idx].category;
@@ -209,10 +207,10 @@ export const medicineService = {
     } else {
       const medicines = await readJsonDb();
       const initialLength = medicines.length;
-      const itemToDelete = medicines.find(m => m.id === id);
+      const itemToDelete = medicines.find(m => m._id === id);
       if (!itemToDelete) return false;
 
-      const filtered = medicines.filter((m) => m.id !== id);
+      const filtered = medicines.filter((m) => m._id !== id);
       if (filtered.length !== initialLength) {
         await updateShardAfterMutation(filtered, id);
         return true;
