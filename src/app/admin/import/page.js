@@ -115,15 +115,26 @@ export default function AdminImportPage() {
                     <p className="text-xs text-gray-500">{data.length} medicines detected</p>
                   </div>
                 </div>
-                <button 
-                  onClick={() => {setData(null); setFile(null);}}
-                  className="text-xs font-semibold text-red-500 hover:underline"
-                >
-                  Change File
-                </button>
+                
+                <div className="flex items-center gap-3">
+                  <button 
+                    disabled={importing}
+                    onClick={() => {setData(null); setFile(null);}}
+                    className="px-4 py-2 text-sm font-semibold text-gray-500 hover:text-red-500 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    disabled={importing || data.some(m => !m.isValid)}
+                    onClick={handleImport}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-indigo-100 dark:shadow-none flex items-center gap-2 disabled:opacity-50"
+                  >
+                    {importing ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Confirm Import'}
+                  </button>
+                </div>
               </div>
 
-              <div className="max-h-[400px] overflow-auto rounded-xl border border-gray-200 dark:border-gray-800">
+              <div className="max-h-[500px] overflow-auto rounded-xl border border-gray-200 dark:border-gray-800">
                 <table className="w-full text-left text-sm whitespace-nowrap">
                   <thead className="bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 h-10 border-b border-gray-200 dark:border-gray-800">
                     <tr>
@@ -153,23 +164,6 @@ export default function AdminImportPage() {
                 {data.length > 50 && (
                   <div className="p-3 text-center bg-gray-50 dark:bg-gray-900 text-xs text-gray-500 italic">Showing first 50 entries...</div>
                 )}
-              </div>
-
-              <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-100 dark:border-gray-800">
-                  <button 
-                    disabled={importing}
-                    onClick={() => {setData(null); setFile(null);}}
-                    className="px-6 py-2.5 text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    Cancel
-                  </button>
-                  <button 
-                    disabled={importing || data.some(m => !m.isValid)}
-                    onClick={handleImport}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-2.5 rounded-lg font-bold transition-all shadow-lg shadow-indigo-100 dark:shadow-none flex items-center gap-2 disabled:opacity-50"
-                  >
-                    {importing ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Confirm Batch Import'}
-                  </button>
               </div>
             </div>
           )}
