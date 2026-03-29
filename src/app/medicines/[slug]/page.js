@@ -27,7 +27,7 @@ export default async function MedicineDetail({ params }) {
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-[#0a0a0a] font-sans text-gray-900 dark:text-gray-100 selection:bg-indigo-100 dark:selection:bg-indigo-900/40">
       <PublicNavbar />
 
-      <main className="flex-1 max-w-4xl w-full mx-auto px-4 py-12 md:py-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
         <div>
           <Link href="/medicines" className="inline-flex items-center gap-2 group text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors mb-6">
              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 duration-300" />
@@ -43,8 +43,8 @@ export default async function MedicineDetail({ params }) {
              {medicine.imageUrl ? (
                <img src={medicine.imageUrl} alt={medicine.name} className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800" />
              ) : (
-               <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 bg-indigo-50 dark:bg-indigo-950/40 rounded-3xl flex items-center justify-center border border-indigo-100/50 dark:border-indigo-900/30">
-                 <Pill className="w-12 h-12 md:w-16 md:h-16 text-indigo-600 dark:text-indigo-400 opacity-80 stroke-1" />
+               <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 bg-indigo-50 dark:bg-indigo-950/40 rounded-2xl flex items-center justify-center border border-indigo-100/50 dark:border-indigo-900/30">
+                 <Pill className="w-8 h-8 md:w-10 md:h-10 text-indigo-600 dark:text-indigo-400 opacity-80 stroke-1" />
                </div>
              )}
              
@@ -75,12 +75,9 @@ export default async function MedicineDetail({ params }) {
            </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
            {/* Dosages */}
            <div className="bg-white dark:bg-[#111111] rounded-3xl p-8 ring-1 ring-gray-200/50 dark:ring-gray-800 shadow-sm relative overflow-hidden group">
-             <div className="absolute top-6 right-6 opacity-5 group-hover:scale-110 transition-transform duration-500">
-                <PlusCircle className="w-24 h-24" />
-             </div>
              <div className="flex items-center gap-3 mb-6 relative z-10">
                <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 rounded-xl">
                  <PlusCircle className="w-6 h-6" />
@@ -103,9 +100,6 @@ export default async function MedicineDetail({ params }) {
 
            {/* Side Effects */}
            <div className="bg-white dark:bg-[#111111] rounded-3xl p-8 ring-1 ring-gray-200/50 dark:ring-gray-800 shadow-sm relative overflow-hidden group">
-             <div className="absolute top-6 right-6 opacity-5 group-hover:scale-110 transition-transform duration-500">
-                 <Info className="w-24 h-24" />
-             </div>
              <div className="flex items-center gap-3 mb-6 relative z-10">
                <div className="p-2.5 bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 rounded-xl">
                  <Info className="w-6 h-6" />
@@ -127,7 +121,7 @@ export default async function MedicineDetail({ params }) {
            </div>
 
            {/* Precautions */}
-           <div className="md:col-span-2 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-900/10 rounded-3xl p-8 ring-1 ring-red-100 dark:ring-red-900/30 shadow-sm relative overflow-hidden">
+           <div className="md:col-span-2 lg:col-span-1 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-900/10 rounded-3xl p-8 ring-1 ring-red-100 dark:ring-red-900/30 shadow-sm relative overflow-hidden h-full">
              <div className="flex items-center gap-3 mb-6 relative z-10">
                <div className="p-2.5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-xl">
                  <ShieldAlert className="w-6 h-6" />
