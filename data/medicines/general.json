@@ -7,11 +7,137 @@
     "genericName": "Synthroid equivalent",
     "manufacturer": "ThyroCheck",
     "description": "Used to treat an underactive thyroid (hypothyroidism).",
-    "dosages": ["25mcg", "50mcg", "75mcg", "100mcg"],
-    "sideEffects": ["Palpitations", "Nervousness", "Weight loss"],
+    "dosages": [
+      "25mcg",
+      "50mcg",
+      "75mcg",
+      "100mcg"
+    ],
+    "sideEffects": [
+      "Palpitations",
+      "Nervousness",
+      "Weight loss"
+    ],
     "precautions": "Risk of heart problems. Consult physician regularly for dosage checks.",
     "imageUrl": "",
     "createdAt": "2026-03-29T18:45:00.000Z",
     "updatedAt": "2026-03-29T18:45:00.000Z"
+  },
+  {
+    "id": "0d000000-0000-0000-0000-000000000000",
+    "slug": "albuterol",
+    "name": "Albuterol",
+    "category": "General",
+    "genericName": "Albuterol",
+    "manufacturer": "Mylan",
+    "description": "Inhaler for treating asthma and exercise-induced asthma.",
+    "dosages": [
+      "90mcg inhaler"
+    ],
+    "sideEffects": [
+      "Dry mouth, cough, shortness of breath"
+    ],
+    "cautions": [
+      "Avoid in patients with known hypersensitivity to albuterol"
+    ],
+    "imageUrl": null,
+    "createdAt": "2023-04-25T12:00:00Z",
+    "updatedAt": "2023-04-25T12:00:00Z"
+  },
+  {
+    "id": "1234567890",
+    "slug": "amoxicillin",
+    "name": "Amoxicillin",
+    "category": "General",
+    "genericName": "Amoxicillin",
+    "manufacturer": "XYZ Pharmaceuticals",
+    "description": "Treatment of bacterial infections",
+    "dosages": [
+      "250mg capsule",
+      "500mg capsule"
+    ],
+    "sideEffects": [
+      "Allergic reactions",
+      "Gastrointestinal issues"
+    ],
+    "precautions": [
+      "Avoid in patients with hypersensitivity to penicillin",
+      "Use caution in patients with kidney impairment"
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-04-01T15:00:00Z",
+    "updatedAt": "2023-04-01T15:00:00Z"
+  },
+  {
+    "id": "34567890-1234-5678-9012-345678901234",
+    "slug": "ibuprofen",
+    "name": "Ibuprofen",
+    "category": "General",
+    "genericName": "Ibuprofen",
+    "manufacturer": "Johnson & Johnson",
+    "description": "Pain relief medication. Suitable for adults and children aged 12 and above.",
+    "dosages": [
+      "200mg",
+      "400mg",
+      "600mg",
+      "800mg"
+    ],
+    "sideEffects": [
+      "Gastrointestinal",
+      "Cardiovascular",
+      "Kidney"
+    ],
+    "precautions": [
+      "Avoid during pregnancy and breastfeeding. Consult a doctor before taking if you are pregnant or breastfeeding."
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-04-01T12:00:00Z",
+    "updatedAt": "2023-04-01T12:00:00Z"
+  },
+  {
+    "id": "64567890-1234-5678-9012-345678901234",
+    "slug": "loratadine",
+    "name": "Loratadine",
+    "category": "General",
+    "genericName": "Loratadine",
+    "manufacturer": "Allevia",
+    "description": "Temporary relief of allergy symptoms. Dosage: 10mg tablets.",
+    "dosages": [
+      "10mg tablets"
+    ],
+    "sideEffects": [
+      "Sneezing, runny nose, itching of the eyes, nose, or throat"
+    ],
+    "precautions": [
+      "Avoid during pregnancy and breastfeeding. Consult a healthcare professional if symptoms persist or worsen."
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-10-26T15:00:00Z",
+    "updatedAt": "2023-10-26T15:30:00Z"
+  },
+  {
+    "id": "523e5432-1234-5678-9012-345678901234",
+    "slug": "omeprazole",
+    "name": "Omeprazole",
+    "category": "General",
+    "genericName": "Omeprazole",
+    "manufacturer": "Pfizer",
+    "description": "Treats certain stomach and esophagus problems.",
+    "dosages": [
+      "10mg capsule",
+      "20mg capsule",
+      "40mg capsule"
+    ],
+    "sideEffects": [
+      "Gastrointestinal issues",
+      "Acid reflux"
+    ],
+    "Precautions": [
+      "Avoid with gastric ulcers or bleeding disorders",
+      "Take with food or milk"
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-04-15T12:00:00Z",
+    "updatedAt": "2023-04-15T12:00:00Z"
   }
 ]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "789abc12345678901234567890123456789012345678901234",
+    "slug": "sertraline",
+    "name": "Sertraline",
+    "category": "Mental Health",
+    "genericName": "Sertraline",
+    "manufacturer": "Pfizer",
+    "description": "Sertraline is a selective serotonin reuptake inhibitor (SSRI) used to treat depression, panic attacks, obsessive compulsive disorder, post-traumatic stress disorder, social anxiety disorder (social phobia), and a severe form of premenstrual syndrome (premenstrual dysphoric disorder).",
+    "doages": [
+      "50mg",
+      "100mg"
+    ],
+    "sideEffects": [
+      "Headache",
+      "Increased heart rate",
+      "Sleep disturbances"
+    ],
+    "Precautions": [
+      "Use caution in patients with a history of liver disease.",
+      "Stop taking sertraline if you have allergies to any of the ingredients"
+    ],
+    "imageUrl": "",
+    "createdAt": "2023-04-01T12:00:00Z",
+    "updatedAt": "2023-04-01T12:00:00Z"
+  }
+]

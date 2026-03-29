@@ -146,18 +146,20 @@ export const medicineService = {
 
     if (isMongo) {
       await dbConnect();
-      const newMed = new Medicine(data);
+      const newMed = new Medicine({
+        ...data,
+        _id: data.id || undefined // Use provided id as mongodb _id if possible
+      });
       const saved = await newMed.save();
       return saved.toObject();
     } else {
-      const medicines = await readJsonDb();
       const newMed = {
         ...data,
-        id: uuidv4(),
+        id: data.id || uuidv4(),
         dosages: data.dosages || [],
         sideEffects: data.sideEffects || [],
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        createdAt: data.createdAt || new Date().toISOString(),
+        updatedAt: data.updatedAt || new Date().toISOString()
       };
       // Put at the start so newest is first
       await writeToShard(newMed);

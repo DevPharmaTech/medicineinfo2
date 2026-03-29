@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Home, Pill, ArrowUpRight, Lock, KeyRound, ShieldCheck } from 'lucide-react';
+import { Home, Pill, ArrowUpRight, Lock, KeyRound, ShieldCheck, FileUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { appConfig } from '@/config/appConfig';
 
@@ -108,6 +108,10 @@ export default function AdminLayout({ children }) {
           <Link href="/admin/medicines" className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
             <Pill className="w-4 h-4" />
             Manage Medicines
+          </Link>
+          <Link href="/admin/import" className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <FileUp className="w-4 h-4" />
+            Import Data
           </Link>
           
           <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-800">
