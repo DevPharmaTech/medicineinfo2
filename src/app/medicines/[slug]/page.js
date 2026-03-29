@@ -7,8 +7,8 @@ import Footer from '@/components/Footer';
 import { typography } from '@/config/typography';
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
-  const medicine = await medicineService.getMedicineById(id);
+  const { slug } = await params;
+  const medicine = await medicineService.getMedicineBySlug(slug);
   return { 
     title: medicine ? `${medicine.name} | DevPharma` : 'Medicine Not Found',
     description: medicine ? medicine.description : 'Open medicine directory'
@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function MedicineDetail({ params }) {
-  const { id } = await params;
-  const medicine = await medicineService.getMedicineById(id);
+  const { slug } = await params;
+  const medicine = await medicineService.getMedicineBySlug(slug);
   
   if (!medicine) {
     notFound();

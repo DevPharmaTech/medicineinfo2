@@ -27,6 +27,15 @@ async function writeJsonDb(data) {
   await fs.writeFile(jsonFilePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
+// Slug generator
+function slugify(text) {
+  if (!text) return '';
+  return text.toString().toLowerCase().trim()
+    .replace(/\s+/g, '-')       // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')   // Remove all non-word chars
+    .replace(/\-\-+/g, '-');    // Replace multiple - with single -
+}
+
 export const medicineService = {
   async getAllMedicines() {
     if (isMongo) {
@@ -40,14 +49,36 @@ export const medicineService = {
   async getMedicineById(id) {
     if (isMongo) {
       await dbConnect();
-      return await Medicine.findById(id).lean();
+      try { return await Medicine.findById(id).lean(); } catch (e) { return null; }
     } else {
       const medicines = await readJsonDb();
       return medicines.find((m) => m.id === id) || null;
     }
   },
 
+  async getMedicineBySlug(slugOrId) {
+    if (isMongo) {
+      await dbConnect();
+      let med = await Medicine.findOne({ slug: slugOrId }).lean();
+      if (!med) {
+        // Fallback to ID loosely if no slug matched
+        try { med = await Medicine.findById(slugOrId).lean(); } catch (e) {}
+      }
+      return med;
+    } else {
+      const medicines = await readJsonDb();
+      let med = medicines.find((m) => m.slug === slugOrId);
+      if (!med) med = medicines.find((m) => m.id === slugOrId) || null;
+      return med;
+    }
+  },
+
   async createMedicine(data) {
+    // Generate slug from name automatically
+    if (data.name && !data.slug) {
+      data.slug = slugify(data.name);
+    }
+
     if (isMongo) {
       await dbConnect();
       const newMed = new Medicine(data);
@@ -71,6 +102,11 @@ export const medicineService = {
   },
 
   async updateMedicine(id, data) {
+    // Regenerate slug if name is updated
+    if (data.name && !data.slug) {
+      data.slug = slugify(data.name);
+    }
+
     if (isMongo) {
       await dbConnect();
       const updated = await Medicine.findByIdAndUpdate(id, data, { new: true, runValidators: true });

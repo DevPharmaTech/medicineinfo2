@@ -3,7 +3,7 @@ import { medicineService } from '@/services/medicineService';
 
 export async function GET(request, { params }) {
   try {
-    const { id } = await params;
+    const { slug: id } = await params;
     const medicine = await medicineService.getMedicineById(id);
     
     if (!medicine) {
@@ -19,7 +19,7 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   try {
-    const { id } = await params;
+    const { slug: id } = await params;
     const data = await request.json();
     const updatedMedicine = await medicineService.updateMedicine(id, data);
     
@@ -36,7 +36,7 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const { id } = await params;
+    const { slug: id } = await params;
     const success = await medicineService.deleteMedicine(id);
     
     if (!success) {
