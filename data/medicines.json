@@ -1,0 +1,66 @@
+[
+  {
+    "id": "64bc8a8f4c2e5b001c8e4d22",
+    "name": "Paracetamol",
+    "genericName": "Acetaminophen",
+    "manufacturer": "HealthCare Inc",
+    "description": "It is used to treat mild to moderate pain (from headaches, menstrual periods, toothaches, backaches, osteoarthritis, or cold/flu aches and pains) and to reduce fever.",
+    "dosages": [
+      "500mg tablet",
+      "650mg tablet",
+      "250mg suspension"
+    ],
+    "sideEffects": [
+      "Nausea",
+      "Stomach pain",
+      "Loss of appetite"
+    ],
+    "precautions": "Do not exceed the recommended dose. Avoid alcohol while taking this medication. Consult a doctor with severe liver issues.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:10:00.000Z",
+    "updatedAt": "2026-03-29T07:10:00.000Z"
+  },
+  {
+    "id": "64bc8a8f4c2e5b001c8e4d23",
+    "name": "Amoxil",
+    "genericName": "Amoxicillin",
+    "manufacturer": "PharmaMed Co.",
+    "description": "A penicillin antibiotic used to treat many different types of infection caused by bacteria, such as tonsillitis, bronchitis, pneumonia, and infections of the ear, nose, throat, skin, or urinary tract.",
+    "dosages": [
+      "250mg capsule",
+      "500mg capsule",
+      "125mg/5mL suspension"
+    ],
+    "sideEffects": [
+      "Diarrhea",
+      "Rash",
+      "Allergic reaction"
+    ],
+    "precautions": "Do not use if you are allergic to amoxicillin or to any other penicillin antibiotic. Finish the entire course of medication.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:11:00.000Z",
+    "updatedAt": "2026-03-29T07:11:00.000Z"
+  },
+  {
+    "id": "64bc8a8f4c2e5b001c8e4d24",
+    "name": "Lipitor",
+    "genericName": "Atorvastatin",
+    "manufacturer": "Pfizer",
+    "description": "Reduces levels of bad cholesterol (low-density lipoprotein, or LDL) and triglycerides in the blood, while increasing levels of good cholesterol.",
+    "dosages": [
+      "10mg tablet",
+      "20mg tablet",
+      "40mg tablet",
+      "80mg tablet"
+    ],
+    "sideEffects": [
+      "Muscle pain",
+      "Liver problems",
+      "Digestive issues"
+    ],
+    "precautions": "Do not use if pregnant or nursing. Advise doctor of any muscle pain immediately. Avoid grapefruit juice.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:12:00.000Z",
+    "updatedAt": "2026-03-29T07:12:00.000Z"
+  }
+]
