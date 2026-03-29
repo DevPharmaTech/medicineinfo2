@@ -17,9 +17,13 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both scale-90 md:scale-100 origin-center">
-        <div className="inline-flex items-center justify-center py-1 md:py-1.5 px-3 md:px-4 mb-4 bg-white/60 dark:bg-gray-900/40 backdrop-blur-md text-indigo-700 dark:text-indigo-300 font-bold text-[0.65rem] md:text-[0.75rem] uppercase tracking-widest rounded-full ring-1 ring-inset ring-indigo-200/50 dark:ring-indigo-700/30 shadow-sm transition-colors">
-          <span className="flex h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-indigo-600 dark:bg-indigo-400 mr-2 animate-pulse"></span>
-          Open Clinical Data Protocol
+        <div className="flex flex-col sm:flex-row items-center justify-center py-2 sm:py-1.5 px-4 mb-4 bg-white/60 dark:bg-gray-900/40 backdrop-blur-md text-indigo-700 dark:text-indigo-300 font-bold text-[0.65rem] md:text-[0.75rem] uppercase tracking-widest rounded-3xl sm:rounded-full ring-1 ring-inset ring-indigo-200/50 dark:ring-indigo-700/30 shadow-sm transition-colors text-center leading-relaxed">
+          <div className="flex items-center mb-1 sm:mb-0">
+             <span className="flex h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-indigo-600 dark:bg-indigo-400 mr-2 animate-pulse"></span>
+             <span>Open Clinical Data Protocol</span>
+          </div>
+          <span className="hidden sm:inline mx-2 opacity-50">•</span>
+          <span className="opacity-90">Curated by Divyanshu Singh, M.Pharm</span>
         </div>
 
         <h1 className={`${typography.h1} mb-3 text-slate-900 dark:text-white`}>

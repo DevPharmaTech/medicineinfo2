@@ -55,7 +55,13 @@ export default function AboutPage() {
               </p>
            </div>
         </div>
-
+        
+        <div className="mt-12 text-center border-t border-slate-100 dark:border-slate-800/60 pt-10">
+           <h4 className={`${typography.h5} text-slate-900 dark:text-white mb-2`}>Project Foundation</h4>
+           <p className={`${typography.pSmall} text-slate-500 dark:text-slate-400`}>
+             Established and maintained by <strong>Divyanshu Singh</strong> to provide the world with open, reliable clinical data.
+           </p>
+        </div>
       </main>
       <Footer />
     </div>
