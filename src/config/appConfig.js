@@ -7,5 +7,6 @@
 export const appConfig = {
   name: "Medicineinfo",
   tagline: "Free Clinical Access",
-  footerCopyright: "Medicineinfo Info. This database is completely free and requires no signup."
+  footerCopyright: "Medicineinfo Info. This database is completely free and requires no signup.",
+  adminPassword: "dks123singh" // Hardcoded admin password for internal use
 };
