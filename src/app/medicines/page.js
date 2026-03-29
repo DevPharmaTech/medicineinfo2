@@ -7,8 +7,20 @@ import { typography } from '@/config/typography';
 
 export const metadata = { title: "Medicines Directory | DevPharma" };
 
-export default async function PublicMedicinesList() {
-  const medicines = await medicineService.getAllMedicines();
+export default async function PublicMedicinesList(props) {
+  const searchParams = await props.searchParams;
+  const q = searchParams?.q || '';
+
+  let medicines = await medicineService.getAllMedicines();
+  
+  if (q) {
+    const query = q.toLowerCase();
+    medicines = medicines.filter(m => 
+      m.name.toLowerCase().includes(query) || 
+      (m.genericName && m.genericName.toLowerCase().includes(query)) ||
+      (m.description && m.description.toLowerCase().includes(query))
+    );
+  }
   
   return (
     <div className="flex flex-col min-h-screen bg-[#fafafa] dark:bg-[#09090b] font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900">
