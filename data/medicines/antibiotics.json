@@ -1,0 +1,25 @@
+[
+  {
+    "id": "64bc8a8f4c2e5b001c8e4d23",
+    "slug": "amoxil",
+    "name": "Amoxil",
+    "category": "Antibiotics",
+    "genericName": "Amoxicillin",
+    "manufacturer": "PharmaMed Co.",
+    "description": "A penicillin antibiotic used to treat many different types of infection caused by bacteria, such as tonsillitis, bronchitis, pneumonia, and infections of the ear, nose, throat, skin, or urinary tract.",
+    "dosages": [
+      "250mg capsule",
+      "500mg capsule",
+      "125mg/5mL suspension"
+    ],
+    "sideEffects": [
+      "Diarrhea",
+      "Rash",
+      "Allergic reaction"
+    ],
+    "precautions": "Do not use if you are allergic to amoxicillin or to any other penicillin antibiotic. Finish the entire course of medication.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:11:00.000Z",
+    "updatedAt": "2026-03-29T07:11:00.000Z"
+  }
+]

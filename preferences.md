@@ -1,6 +1,6 @@
-# DevPharma Info - Development Preferences
+# Medicineinfo Info - Development Preferences
 
-This document outlines the standard coding styles, technologies, and UI/UX preferences to be followed when developing or modifying the DevPharma Info project.
+This document outlines the standard coding styles, technologies, and UI/UX preferences to be followed when developing or modifying the Medicineinfo Info project.
 
 ## Core Technologies
 - **Framework**: Next.js (App Router)
@@ -22,6 +22,9 @@ This document outlines the standard coding styles, technologies, and UI/UX prefe
 - **Global Typography Manager**:
   - Do not sporadically hardcode heading and paragraph tailwind scales (ex: `text-5xl md:text-7xl`) directly in page components.
   - Import and map properties generated strictly from `src/config/typography.js` (e.g., `<h1 className={typography.h1}>`) so font sizing modifications apply instantly worldwide.
+- **Global Branding & App Variables**:
+  - Do **NOT** hardcode the application name (e.g., "Medicineinfo") or static branding strings in components or metadata.
+  - Always import and use variables from `src/config/appConfig.js` (e.g., `{appConfig.name}`) for all text branding, browser titles, and copyright notices.
 
 ## Architecture & Code Guidelines
 - **Component Extensibility**: 

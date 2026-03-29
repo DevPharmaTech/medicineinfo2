@@ -1,0 +1,26 @@
+[
+  {
+    "id": "64bc8a8f4c2e5b001c8e4d24",
+    "slug": "lipitor",
+    "name": "Lipitor",
+    "category": "Cardiovascular",
+    "genericName": "Atorvastatin",
+    "manufacturer": "Pfizer",
+    "description": "Reduces levels of bad cholesterol (low-density lipoprotein, or LDL) and triglycerides in the blood, while increasing levels of good cholesterol.",
+    "dosages": [
+      "10mg tablet",
+      "20mg tablet",
+      "40mg tablet",
+      "80mg tablet"
+    ],
+    "sideEffects": [
+      "Muscle pain",
+      "Liver problems",
+      "Digestive issues"
+    ],
+    "precautions": "Do not use if pregnant or nursing. Advise doctor of any muscle pain immediately. Avoid grapefruit juice.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T07:12:00.000Z",
+    "updatedAt": "2026-03-29T07:12:00.000Z"
+  }
+]
