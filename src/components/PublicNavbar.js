@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Pill, Search, Menu, X } from 'lucide-react';
 import { typography } from '@/config/typography';
+import { appConfig } from '@/config/appConfig';
 import { useState } from 'react';
 
 export default function PublicNavbar() {
@@ -16,7 +17,7 @@ export default function PublicNavbar() {
         <div className="flex-shrink-0 flex items-center z-20">
           <Link href="/" className="flex items-center gap-2.5 group transition-transform hover:scale-105 active:scale-95 text-indigo-600 dark:text-indigo-500">
               <Pill className="w-6 h-6 stroke-[2.5]" />
-              <span className={`${typography.h5} text-slate-900 dark:text-white hidden sm:block`}>Medicineinfo</span>
+              <span className={`${typography.h5} text-slate-900 dark:text-white hidden sm:block`}>{appConfig.name}</span>
           </Link>
         </div>
         

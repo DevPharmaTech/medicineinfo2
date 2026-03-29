@@ -1,9 +1,10 @@
 import PublicNavbar from '@/components/PublicNavbar';
 import Footer from '@/components/Footer';
 import { typography } from '@/config/typography';
+import { appConfig } from '@/config/appConfig';
 import { Shield, BookOpen, Globe2 } from 'lucide-react';
 
-export const metadata = { title: "About Us | Medicineinfo" };
+export const metadata = { title: `About Us | ${appConfig.name}` };
 
 export default function AboutPage() {
   return (
@@ -19,7 +20,7 @@ export default function AboutPage() {
             Democratizing Clinical Information
           </h1>
           <p className={`${typography.pLarge} text-slate-600 dark:text-slate-400 max-w-3xl mx-auto`}>
-            Medicineinfo was founded on a simple principle: high-quality, evidence-based pharmaceutical data shouldn't be locked behind paywalls or complex academic subscriptions.
+            {appConfig.name} was founded on a simple principle: high-quality, evidence-based pharmaceutical data shouldn't be locked behind paywalls or complex academic subscriptions.
           </p>
         </div>
 

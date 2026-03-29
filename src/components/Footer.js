@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Pill } from 'lucide-react';
 import { typography } from '@/config/typography';
+import { appConfig } from '@/config/appConfig';
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <Pill className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
             <span className={`${typography.h5} text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500`}>
-              Medicineinfo
+              {appConfig.name}
             </span>
           </div>
 
@@ -32,7 +33,7 @@ export default function Footer() {
 
         {/* Bottom Text */}
         <div className={`mt-3 pt-2 border-t border-slate-100 dark:border-slate-900 text-center ${typography.pTiny} text-slate-400`}>
-          <p>© {new Date().getFullYear()} Medicineinfo Info. Free & no signup.</p>
+          <p>© {new Date().getFullYear()} {appConfig.footerCopyright}</p>
           <p className="mt-1">For educational and reference purposes only. Always consult a physician for medical advice.</p>
         </div>
 

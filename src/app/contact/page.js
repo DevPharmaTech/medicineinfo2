@@ -1,9 +1,10 @@
 import PublicNavbar from '@/components/PublicNavbar';
 import Footer from '@/components/Footer';
 import { typography } from '@/config/typography';
+import { appConfig } from '@/config/appConfig';
 import { Mail, MapPin, MessageSquare } from 'lucide-react';
 
-export const metadata = { title: "Contact Us | Medicineinfo" };
+export const metadata = { title: `Contact Us | ${appConfig.name}` };
 
 export default function ContactPage() {
   return (

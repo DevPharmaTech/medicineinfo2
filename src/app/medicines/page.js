@@ -4,8 +4,9 @@ import { Pill, Stethoscope, Info } from 'lucide-react';
 import PublicNavbar from '@/components/PublicNavbar';
 import Footer from '@/components/Footer';
 import { typography } from '@/config/typography';
+import { appConfig } from '@/config/appConfig';
 
-export const metadata = { title: "Medicines Directory | DevPharma" };
+export const metadata = { title: `Medicines Directory | ${appConfig.name}` };
 
 export default async function PublicMedicinesList(props) {
   const searchParams = await props.searchParams;

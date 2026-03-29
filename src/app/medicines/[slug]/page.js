@@ -5,13 +5,14 @@ import { Pill, ArrowLeft, ShieldAlert, PlusCircle, Factory, Info, FileText } fro
 import PublicNavbar from '@/components/PublicNavbar';
 import Footer from '@/components/Footer';
 import { typography } from '@/config/typography';
+import { appConfig } from '@/config/appConfig';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const medicine = await medicineService.getMedicineBySlug(slug);
   return { 
-    title: medicine ? `${medicine.name} | DevPharma` : 'Medicine Not Found',
-    description: medicine ? medicine.description : 'Open medicine directory'
+    title: medicine ? `${medicine.name} | ${appConfig.name}` : 'Medicine Not Found',
+    description: `Detailed clinical reference for ${medicine?.name || 'medicines'}`
   };
 }
 

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { appConfig } from "@/config/appConfig";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Medicine Info",
-  description: "Medicine Info free plaform for medicine information",
+  title: appConfig.name,
+  description: `${appConfig.name} - Free platform for medicine information`,
 };
 
 export default function RootLayout({ children }) {
