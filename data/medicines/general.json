@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "gen01abcdef12345678901234",
+    "slug": "levothyroxine",
+    "name": "Levothyroxine",
+    "category": "General",
+    "genericName": "Synthroid equivalent",
+    "manufacturer": "ThyroCheck",
+    "description": "Used to treat an underactive thyroid (hypothyroidism).",
+    "dosages": ["25mcg", "50mcg", "75mcg", "100mcg"],
+    "sideEffects": ["Palpitations", "Nervousness", "Weight loss"],
+    "precautions": "Risk of heart problems. Consult physician regularly for dosage checks.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
+  }
+]

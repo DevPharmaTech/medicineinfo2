@@ -21,5 +21,20 @@
     "imageUrl": "",
     "createdAt": "2026-03-29T07:10:00.000Z",
     "updatedAt": "2026-03-29T07:10:00.000Z"
+  },
+  {
+    "id": "analg02abcdef1234567890",
+    "slug": "ibuprofen",
+    "name": "Ibuprofen",
+    "category": "Analgesics",
+    "genericName": "Advil/Motrin equivalent",
+    "manufacturer": "PainLess",
+    "description": "Used to relieve pain from various conditions such as headache, dental pain, and muscle aches.",
+    "dosages": ["200mg tablet", "400mg tablet", "600mg tablet"],
+    "sideEffects": ["Stomach upset", "Nausea", "Dizziness"],
+    "precautions": "Risk of stomach bleeding. Avoid alcohol.",
+    "imageUrl": "",
+    "createdAt": "2026-03-29T18:45:00.000Z",
+    "updatedAt": "2026-03-29T18:45:00.000Z"
   }
 ]
