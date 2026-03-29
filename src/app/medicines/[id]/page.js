@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Pill, ArrowLeft, ShieldAlert, PlusCircle, Factory, Info, FileText } from 'lucide-react';
 import PublicNavbar from '@/components/PublicNavbar';
 import Footer from '@/components/Footer';
+import { typography } from '@/config/typography';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -48,10 +49,10 @@ export default async function MedicineDetail({ params }) {
              )}
              
              <div className="flex-1">
-               <div className="inline-flex items-center justify-center py-1 px-3 mb-4 bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 font-semibold text-[11px] uppercase tracking-widest rounded-full">
+               <div className="inline-flex items-center justify-center py-1 px-3 mb-4 bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 font-semibold text-xs uppercase tracking-widest rounded-full">
                  Clinical Reference View
                </div>
-               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 text-gray-900 dark:text-white">{medicine.name}</h1>
+               <h1 className={`${typography.h2} mb-3 text-gray-900 dark:text-white`}>{medicine.name}</h1>
                <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400 border-b border-gray-100 dark:border-gray-800 pb-6 mb-6">
                   {medicine.genericName && (
                     <span className="flex items-center gap-1.5 bg-gray-50 dark:bg-black/20 py-1.5 px-3 rounded-lg ring-1 ring-inset ring-gray-200/50 dark:ring-gray-800">
@@ -66,7 +67,7 @@ export default async function MedicineDetail({ params }) {
                </div>
                
                <div className="prose prose-indigo dark:prose-invert max-w-none">
-                 <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-medium">
+                 <p className={`${typography.pLarge} text-gray-600 dark:text-gray-300`}>
                    {medicine.description || 'No detailed clinical description available for this record.'}
                  </p>
                </div>
@@ -84,7 +85,7 @@ export default async function MedicineDetail({ params }) {
                <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 rounded-xl">
                  <PlusCircle className="w-6 h-6" />
                </div>
-               <h2 className="text-2xl font-bold tracking-tight">Available Dosages</h2>
+               <h2 className={`${typography.h3} text-gray-900 dark:text-white`}>Available Dosages</h2>
              </div>
              <ul className="space-y-3 relative z-10">
                {medicine.dosages && medicine.dosages.length > 0 ? (
@@ -109,7 +110,7 @@ export default async function MedicineDetail({ params }) {
                <div className="p-2.5 bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 rounded-xl">
                  <Info className="w-6 h-6" />
                </div>
-               <h2 className="text-2xl font-bold tracking-tight">Common Side Effects</h2>
+               <h2 className={`${typography.h3} text-gray-900 dark:text-white`}>Common Side Effects</h2>
              </div>
              <ul className="space-y-3 relative z-10">
                {medicine.sideEffects && medicine.sideEffects.length > 0 ? (
@@ -131,12 +132,12 @@ export default async function MedicineDetail({ params }) {
                <div className="p-2.5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-xl">
                  <ShieldAlert className="w-6 h-6" />
                </div>
-               <h2 className="text-2xl font-bold text-red-900 dark:text-red-200 tracking-tight">Clinical Warnings & Precautions</h2>
+               <h2 className={`${typography.h3} text-red-900 dark:text-red-200`}>Clinical Warnings & Precautions</h2>
              </div>
-             <div className="relative z-10 p-6 bg-white/60 dark:bg-black/40 backdrop-blur-sm rounded-2xl ring-1 ring-white/50 dark:ring-white/5">
-                <p className="text-lg leading-relaxed text-red-800 dark:text-red-300/90 font-medium">
-                  {medicine.precautions || 'No specific precautions are registered for this drug. Consult a physician.'}
-                </p>
+              <div className="relative z-10 p-6 bg-white/60 dark:bg-black/40 backdrop-blur-sm rounded-2xl ring-1 ring-white/50 dark:ring-white/5 mt-4">
+                 <p className={`${typography.pLarge} text-red-800 dark:text-red-300/90`}>
+                   {medicine.precautions || 'No specific precautions are registered for this drug. Consult a physician.'}
+                 </p>
              </div>
            </div>
         </div>

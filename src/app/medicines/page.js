@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Pill, Stethoscope, Info } from 'lucide-react';
 import PublicNavbar from '@/components/PublicNavbar';
 import Footer from '@/components/Footer';
+import { typography } from '@/config/typography';
 
 export const metadata = { title: "Medicines Directory | DevPharma" };
 
@@ -17,8 +18,8 @@ export default async function PublicMedicinesList() {
         {/* Hero Section */}
         <section className="relative pt-20 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
            <div className="absolute inset-0 z-0 pointer-events-none">
-               <div className="absolute top-10 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px]" />
-               <div className="absolute -top-10 left-0 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[80px]" />
+               <div className="absolute top-10 right-0 w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-indigo-500/10 rounded-full blur-[6rem]" />
+               <div className="absolute -top-10 left-0 w-[35vw] h-[35vw] max-w-[400px] max-h-[400px] bg-cyan-500/10 rounded-full blur-[5rem]" />
            </div>
 
            <div className="max-w-5xl mx-auto px-4 text-center relative z-10 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
@@ -26,11 +27,11 @@ export default async function PublicMedicinesList() {
                 <Stethoscope className="w-4 h-4 mr-2" /> Free Clinical Access
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white leading-[1.1]">
+              <h1 className={`${typography.h1} mb-6 text-gray-900 dark:text-white`}>
                 Open Medicine Directory
               </h1>
               
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+              <p className={`${typography.pLarge} text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10`}>
                 Access comprehensive, accurate, and completely free pharmaceutical references. Browse dosages, interactions, and generic information.
               </p>
            </div>
@@ -38,9 +39,9 @@ export default async function PublicMedicinesList() {
         
         {/* Data Grid */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 relative z-10">
-           <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-200 dark:border-gray-800">
-             <h2 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Available References</h2>
-             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full">{medicines.length} results</span>
+           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-4 border-b border-gray-200 dark:border-gray-800 gap-4 sm:gap-0">
+             <h2 className={`${typography.h3} text-gray-900 dark:text-white`}>Available References</h2>
+             <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full w-fit">{medicines.length} results</span>
            </div>
            
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -64,8 +65,8 @@ export default async function PublicMedicinesList() {
                        <Pill className="text-indigo-600 dark:text-indigo-400 group-hover:text-white w-6 h-6 stroke-[2.5]" />
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors tracking-tight">{med.name}</h3>
-                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">{med.genericName || 'No Generic Registered'}</p>
+                    <h3 className={`${typography.h5} mb-1 text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors`}>{med.name}</h3>
+                    <p className={`${typography.pTiny} text-gray-500 dark:text-gray-400 mb-4`}>{med.genericName || 'No Generic Registered'}</p>
                   </div>
                   
                   <div className="mt-auto pt-5 border-t border-gray-100 dark:border-gray-800/80 flex justify-between items-center text-sm font-semibold relative z-10">
