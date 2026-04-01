@@ -7,9 +7,21 @@ const MedicineSchema = new mongoose.Schema({
   genericName: { type: String },
   manufacturer: { type: String },
   description: { type: String },
-  dosages: { type: [String], default: [] },
+  indications: { type: [String], default: [] },
+  dosageForm: { type: String },
+  strength: { type: String },
+  prescriptionRequired: { type: Boolean, default: false },
+  mechanismOfAction: { type: String },
+  dosage: { 
+    adults: { type: String },
+    children: { type: String }
+  },
   sideEffects: { type: [String], default: [] },
+  warnings: { type: [String], default: [] },
   precautions: { type: String },
+  storage: { type: String },
+  clinicalTrials: { type: String },
+  drugInteractions: { type: [String], default: [] },
   imageUrl: { type: String }
 }, {
   timestamps: true,

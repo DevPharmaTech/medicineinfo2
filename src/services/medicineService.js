@@ -38,14 +38,22 @@ export const medicineService = {
   },
 
   async createMedicine(data) {
-    // Generate slug from name automatically
     if (data.name && !data.slug) {
       data.slug = slugify(data.name);
     }
 
     await dbConnect();
-    const newMed = new Medicine(data);
-    const saved = await newMed.save();
+    // Use upsert on slug to avoid duplicate errors and allow updates via import
+    const saved = await Medicine.findOneAndUpdate(
+      { slug: data.slug },
+      data,
+      { 
+        new: true, 
+        upsert: true, 
+        runValidators: true,
+        setDefaultsOnInsert: true
+      }
+    );
     return saved.toObject();
   },
 

@@ -138,7 +138,7 @@ export default function AdminLayout({ children }) {
 
         {/* Scrollable Content Area */}
         <div className="flex-1 overflow-y-auto w-full">
-          <div className="p-4 md:p-8 lg:p-10 w-full max-w-7xl mx-auto">
+          <div className="p-4 md:p-8 lg:p-10 w-full max-w-5xl mx-auto">
             {children}
           </div>
         </div>

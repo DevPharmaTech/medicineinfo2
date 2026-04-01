@@ -63,7 +63,7 @@ export default async function PublicMedicinesList(props) {
         </section>
         
         {/* Data Grid */}
-        <main className="max-w-7xl mx-auto p-8 relative z-10">
+        <main className="max-w-5xl mx-auto p-8 relative z-10">
            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-4 border-b border-gray-200 dark:border-gray-800 gap-4 sm:gap-0">
              <h2 className={`${typography.h3} text-gray-900 dark:text-white`}>Available References</h2>
              <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full w-fit">{medicines.length} results</span>
