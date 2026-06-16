@@ -66,6 +66,15 @@ When you are done working and want to close the server:
 
 When you make changes to the code or files and want to save and upload them to GitHub, you can use either the **VS Code Interface** or **Terminal Commands**.
 
+### ⚠️ Prerequisite: Run a Build Check
+Before saving your changes, always verify that your project builds correctly without errors:
+1. Open the Terminal in VS Code.
+2. Run the following command:
+   ```bash
+   yarn build
+   ```
+3. **Wait for it to finish**. If there are no red error messages, you can proceed with either Option A or Option B below!
+
 ### Option A: Using the VS Code Interface (Easiest & No Commands)
 
 1. **Open Source Control**:
