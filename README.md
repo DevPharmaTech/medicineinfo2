@@ -1,37 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏥 MedicineInfo - Quick Start Guide
 
-## Getting Started
+Welcome! This guide is designed for **non-technical users** to help you run the project locally, view it in your browser, manage the database using MongoDB Compass, and save/upload your changes using Git.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Step 1: Running the Website Locally
+
+To run the website on your local computer, follow these simple steps:
+
+1. **Open the Terminal in VS Code**:
+   - In VS Code, click on **Terminal** in the top menu and select **New Terminal** (or press ``Ctrl + ` `` on Windows).
+2. **Start the Development Server**:
+   - In the terminal pane at the bottom, type the following command and press **Enter**:
+     ```bash
+     yarn dev
+     ```
+   - *Note: If `yarn` is not installed or doesn't work, you can try `npm run dev`.*
+3. **Open the Website**:
+   - Once the terminal shows that the server is ready, open your web browser (Chrome, Edge, Safari, etc.).
+   - Go to the following address:
+     **[http://localhost:3000](http://localhost:3000)**
+   - You should now see the website running locally!
+
+---
+
+## 🗄️ Step 2: Viewing Database Data in MongoDB Compass
+
+This project uses **MongoDB** to store medicine and clinical data. To see and edit this data visually, you can use **MongoDB Compass**.
+
+### 1. Open MongoDB Compass
+* Open the **MongoDB Compass** application on your computer.
+
+### 2. Connect to the Database
+Depending on your settings, you can connect to either the **Live Cloud Database** or your **Local Database**:
+
+#### Option A: Connect to the Live Cloud Database (Recommended)
+1. Open your `.env.local` file in VS Code.
+2. Find the line starting with `MONGODB_URI=` and copy the entire connection string (it starts with `mongodb+srv://...`).
+3. Paste this connection string into the **New Connection URI** box in MongoDB Compass, and click **Connect**.
+
+#### Option B: Connect to your Local Database
+If you are running MongoDB locally on your computer, paste this connection string in MongoDB Compass and click **Connect**:
+```text
+mongodb://localhost:27017/medicineinfo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. How to See the Data
+Once connected:
+1. In the left-hand sidebar of MongoDB Compass, click on the database named **`medicineinfo`**.
+2. Inside, you will see lists (called **collections**) such as `medicines`, `users`, etc.
+3. Click on any collection to view, search, edit, or delete the data records!
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛑 Step 3: Stopping the Local Server
 
-## Learn More
+When you are done working and want to close the server:
+1. Go back to the VS Code terminal.
+2. Press **`Ctrl + C`** on your keyboard.
+3. Press **`Y`** (if prompted) and then **Enter** to stop the server.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🐙 Step 4: Saving and Uploading Your Changes (Git & GitHub)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+When you make changes to the code or files and want to save and upload them to GitHub, you can use either the **VS Code Interface** or **Terminal Commands**.
 
-## Deploy on Vercel
+### Option A: Using the VS Code Interface (Easiest & No Commands)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Open Source Control**:
+   - Click the **Source Control** icon on the left sidebar (it looks like a branch with three circles: `⌥` or branch icon).
+   - Or press **`Ctrl + Shift + G`** on your keyboard.
+2. **Stage your Changes**:
+   - Hover over the word **Changes** in the panel and click the **`+` (Plus)** icon next to it to stage all changed files.
+3. **Type your Message**:
+   - In the text box at the top (which says *"Message"*), type a short note about what you did. For example: `update readme` or `updated database connection config`.
+4. **Commit the Changes**:
+   - Click the blue **Commit** button.
+5. **Push/Sync to GitHub**:
+   - Click the blue **Sync Changes** button that appears (or click the **`...`** menu at the top-right of the Source Control panel and select **Push**).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# medicineinfo2" 
+### Option B: Using the Terminal Commands
+
+If you prefer to type the commands in the terminal:
+1. Open the Terminal in VS Code.
+2. Run this command to stage all your changed files:
+   ```bash
+   git add .
+   ```
+3. Run this command to save your changes with a message:
+   ```bash
+   git commit -m "Your message here"
+   ```
+4. Run this command to upload your changes to GitHub:
+   ```bash
+   git push
+   ```
